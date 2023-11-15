@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-kx#)qjgjb&4gh29kzkqndfeyd_$nr15#ded3fmbk4q%*l9mpdd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = ['*','shopping-list-production.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['shopping-list-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://shopping-list-production.up.railway.app']
 
 # Application definition
 
