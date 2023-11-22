@@ -31,6 +31,8 @@ CSRF_TRUSTED_ORIGINS = ['https://shopping-list-production.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheader',
+    'authentication',
     'main',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,7 +52,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
 
 ROOT_URLCONF = 'shopping_list.urls'
 

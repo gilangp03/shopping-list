@@ -76,8 +76,8 @@
         <button>
             Add New Product
         </button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product by AJAX</button>
     </a>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product by AJAX</button>
 
     <a href="{% url 'main:logout_user' %}">
         <button>
@@ -142,9 +142,9 @@
         })
         
         document.getElementById("product_table").innerHTML = htmlString
+        refreshProducts()
     }
 
-    refreshProducts()
 
     function addProduct() {
         fetch("{% url 'main:add_product_ajax' %}", {
