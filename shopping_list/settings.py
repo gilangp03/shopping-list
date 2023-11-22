@@ -31,7 +31,7 @@ CSRF_TRUSTED_ORIGINS = ['https://shopping-list-production.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheader',
+    'corsheaders',
     'authentication',
     'main',
     'django.contrib.admin',
